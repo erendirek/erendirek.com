@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+@theme inline {
+    /* main */
+    --color-palette-black: #0a0a0a;
+    --color-palette-green: #00ff84;
+    --color-palette-yellow: #ffd800;
+    --color-palette-white: #e6e6e6;
+
+    /* support */
+    --color-palette-dark-gray: #1a1a1a;
+    --color-palette-dark-green: #00994c;
+    --color-palette-light-yellow: #ffe766;
+
+    /* glow */
+    --glow-green: 0px 0px 15px #00ff84, 0px 0px 30px #00ff84;
+    --glow-yellow: 0px 0px 15px #ffd800, 0px 0px 30px #ffd800;
+    --glow-green-yellow: 0px 0px 10px #00ff84, 0px 0px 20px #ffd800;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background: var(--color-palette-black);
+}

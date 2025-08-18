@@ -1,0 +1,29 @@
+@import url("@/ui/globals.css");
+
+.glow-noise {
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+    0%,
+    100% {
+        text-shadow: 0px 0px 12px var(--color-palette-green),
+            0px 0px 25px var(--color-palette-yellow);
+    }
+    20% {
+        text-shadow: 0px 0px 12px var(--color-palette-green),
+            0px 0px 25px var(--color-palette-yellow);
+    }
+    40% {
+        text-shadow: 0px 0px 18px var(--color-palette-green),
+            0px 0px 35px var(--color-palette-yellow);
+    }
+    60% {
+        text-shadow: 0px 0px 14px var(--color-palette-green),
+            0px 0px 28px var(--color-palette-yellow);
+    }
+    80% {
+        text-shadow: 0px 0px 20px var(--color-palette-green),
+            0px 0px 40px var(--color-palette-yellow);
+    }
+}
