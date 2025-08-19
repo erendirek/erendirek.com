@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/ui/globals.css";
+import "@/ui/general.css";
 import { fira_code } from "@/ui/fonts";
 
 export const metadata: Metadata = {
