@@ -6,14 +6,16 @@ import TypeWriterText from "@/components/TypeWriterText/TypeWriterText";
 
 export default function About() {
     return (
-        <div id="about" className="section h-screen snap-start">
+        <div id="about" className="section h-screen w-full snap-start">
             <div className="container mx-auto pt-32">
-                <div className="flex">
+                <div className="flex pt-4">
                     <p
                         className={clsx(
                             `${share_tech_mono.className} antialiased}`,
-                            "text-palette-green text-7xl",
+                            "text-center text-6xl",
+                            "text-palette-green lg:text-7xl",
                             "header-green-glow-animation",
+                            "hidden md:block",
                         )}
                     >
                         [eren ~]$&#x2800;
@@ -25,14 +27,16 @@ export default function About() {
                         reanimateOnScroll
                         className={clsx(
                             `${share_tech_mono.className} antialiased}`,
-                            "text-palette-green text-7xl",
+                            "text-center text-6xl",
+                            "text-palette-green lg:text-7xl",
                             "header-green-glow-animation",
+                            "flex-1 text-center md:text-left",
                         )}
                     />
                 </div>
                 <div className="flex">
                     <div className="flex-1 px-4">
-                        <p className="text-palette-white mt-12 text-2xl leading-10">
+                        <p className="text-palette-white mt-12 text-justify leading-10 sm:text-xl md:text-left md:text-2xl">
                             I’m a self-taught developer and Computer Science
                             student with a strong passion for technology. Since
                             2020, I’ve been exploring and improving myself in
@@ -55,7 +59,7 @@ export default function About() {
                             development and engineering.
                         </p>
                     </div>
-                    <div className="flex flex-1 items-center justify-center px-4 pt-24">
+                    <div className="hidden flex-1 items-center justify-center px-4 pt-24 xl:flex">
                         <div className="relative">
                             <div className="aspect-square w-[25rem]">
                                 <div

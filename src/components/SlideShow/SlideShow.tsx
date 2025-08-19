@@ -7,13 +7,12 @@ import React, { Children, HTMLAttributes, useEffect, useState } from "react";
 export default function SlideShow({
     children,
     className,
-    shownContentCount,
 }: Readonly<{
     children?: React.ReactNode;
     className?: string;
-    shownContentCount: number;
 }>) {
     const [current, setCurrent] = useState(0);
+    const [shownContentCount, setShownContentCount] = useState(2);
 
     const prev = () => {
         const childCount = Children.count(children);
@@ -28,6 +27,24 @@ export default function SlideShow({
         const newCurrent = (current + 1) % limit;
         setCurrent(newCurrent);
     };
+
+    useEffect(() => {
+        const onSizeChanged = () => {
+            const sizeX = window.innerWidth;
+            let scc = 0;
+            scc = sizeX < 1024 ? 1 : 2;
+
+            setShownContentCount(scc);
+        };
+
+        window.addEventListener("resize", onSizeChanged);
+
+        return () => window.removeEventListener("resize", onSizeChanged);
+    }, []);
+
+    useEffect(() => {
+        console.log(shownContentCount);
+    }, [shownContentCount]);
 
     return (
         <div className={clsx(className)}>

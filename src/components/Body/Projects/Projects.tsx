@@ -9,12 +9,14 @@ export default function Projects() {
     return (
         <div id="projects" className="section h-screen snap-start">
             <div className="container mx-auto h-full pt-32">
-                <div className="flex">
+                <div className="flex pt-4">
                     <p
                         className={clsx(
                             `${share_tech_mono.className} antialiased}`,
-                            "text-palette-green text-7xl",
+                            "text-center text-6xl",
+                            "text-palette-green lg:text-7xl",
                             "header-green-glow-animation",
+                            "hidden md:block",
                         )}
                     >
                         [eren ~]$&#x2800;
@@ -26,13 +28,15 @@ export default function Projects() {
                         reanimateOnScroll
                         className={clsx(
                             `${share_tech_mono.className} antialiased}`,
-                            "text-palette-green text-7xl",
+                            "text-center text-6xl",
+                            "text-palette-green lg:text-7xl",
                             "header-green-glow-animation",
+                            "flex-1 text-center md:text-left",
                         )}
                     />
                 </div>
                 <div className="mt-32 flex h-96 items-stretch px-4">
-                    <SlideShow className="flex-1" shownContentCount={2}>
+                    <SlideShow className="flex-1">
                         <SlideShowElement
                             title="Yaten's Horror Session"
                             description="My first game published on Google Play."

@@ -52,7 +52,7 @@ export default function Home() {
                             )}
                         />
 
-                        <p className="text-palette-white mt-12 text-center text-xl lg:text-left lg:text-2xl">
+                        <p className="text-palette-white mt-12 text-justify text-xl lg:text-left lg:text-2xl">
                             I’m a self-taught developer who enjoys learning and
                             improving in different fields. Here, you can find my
                             projects, blog posts, and contact information.
