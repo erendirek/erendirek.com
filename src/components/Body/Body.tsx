@@ -12,7 +12,7 @@ export default function Body() {
             <About />
             <Projects />
             <Blogs />
-            <Contact />
+            {/* <Contact /> */}
         </main>
     );
 }

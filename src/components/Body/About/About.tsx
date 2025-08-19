@@ -27,7 +27,7 @@ export default function About() {
                         reanimateOnScroll
                         className={clsx(
                             `${share_tech_mono.className} antialiased}`,
-                            "text-center text-6xl",
+                            "text-center text-5xl md:text-6xl",
                             "text-palette-green lg:text-7xl",
                             "header-green-glow-animation",
                             "flex-1 text-center md:text-left",
@@ -36,7 +36,7 @@ export default function About() {
                 </div>
                 <div className="flex">
                     <div className="flex-1 px-4">
-                        <p className="text-palette-white mt-12 text-justify leading-10 sm:text-xl md:text-left md:text-2xl">
+                        <p className="text-palette-white mt-12 text-justify leading-8 sm:text-xl md:text-left md:text-2xl md:leading-10">
                             I’m a self-taught developer and Computer Science
                             student with a strong passion for technology. Since
                             2020, I’ve been exploring and improving myself in

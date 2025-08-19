@@ -1,5 +1,11 @@
 @import url("@/ui/globals.css");
 
+.section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    overflow: hidden;
+}
+
 .header-green-glow-animation {
     animation: green-glow-animation 4s infinite;
 }

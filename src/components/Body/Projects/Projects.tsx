@@ -28,7 +28,7 @@ export default function Projects() {
                         reanimateOnScroll
                         className={clsx(
                             `${share_tech_mono.className} antialiased}`,
-                            "text-center text-6xl",
+                            "text-center text-5xl md:text-6xl",
                             "text-palette-green lg:text-7xl",
                             "header-green-glow-animation",
                             "flex-1 text-center md:text-left",
@@ -36,7 +36,7 @@ export default function Projects() {
                     />
                 </div>
                 <div className="mt-32 flex h-96 items-stretch px-4">
-                    <SlideShow className="flex-1">
+                    <SlideShow className="hidden flex-1">
                         <SlideShowElement
                             title="Yaten's Horror Session"
                             description="My first game published on Google Play."
