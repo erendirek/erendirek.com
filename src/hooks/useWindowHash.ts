@@ -6,11 +6,14 @@ export default function useWindowHash(): [string, (hash: string) => void] {
     useEffect(() => {
         const onHashChange = () => {
             setHash(window.location.hash);
-            console.log(hash);
         };
         window.addEventListener("hashchange", onHashChange);
+        window.addEventListener("hash-updated", onHashChange);
 
-        return () => window.removeEventListener("hashchange", onHashChange);
+        return () => {
+            window.removeEventListener("hashchange", onHashChange);
+            window.removeEventListener("hash-updated", onHashChange);
+        };
     }, []);
 
     return [hash, setHash];
