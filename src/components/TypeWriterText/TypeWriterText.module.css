@@ -1,0 +1,11 @@
+@import url("@/ui/globals.css");
+
+.cursor {
+    animation: blink-animation 0.75s infinite step-end;
+}
+
+@keyframes blink-animation {
+    50% {
+        opacity: 0;
+    }
+}
