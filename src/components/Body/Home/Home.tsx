@@ -1,8 +1,9 @@
 import { orbitron, share_tech_mono, fira_code } from "@/ui/fonts";
 import clsx from "clsx";
 import React from "react";
-import "./Home.css";
+import styles from "./Home.module.css";
 import { MoveRight } from "lucide-react";
+import TypeWriterText from "@/components/TypeWriterText/TypeWriterText";
 
 function MainButton({ text, hash }: Readonly<{ text: string; hash: string }>) {
     return (
@@ -25,42 +26,48 @@ function MainButton({ text, hash }: Readonly<{ text: string; hash: string }>) {
 
 export default function Home() {
     return (
-        <div id="home" className="flex h-screen items-center">
-            <div className="px-32">
+        <div
+            id="home"
+            className="section flex h-screen w-screen snap-start items-center overflow-hidden"
+        >
+            <div className="container mx-auto">
                 <div className="flex">
-                    <div className="flex flex-1 flex-col justify-center">
-                        <p
+                    <div className="flex flex-1 flex-col justify-center px-4">
+                        <TypeWriterText
+                            text="eren direk"
+                            animationDuration={400}
+                            cursor
                             className={clsx(
                                 `${share_tech_mono.className} antialiased`,
                                 "text-palette-light-yellow text-8xl",
-                                "main-text-glow-anim",
+                                styles["main-text-glow-anim"],
+                                "typewriter",
                             )}
-                        >
-                            Eren Direk
-                        </p>
+                        />
+
                         <p className="text-palette-white mt-12 text-xl">
                             I’m a self-taught developer who enjoys learning and
                             improving in different fields. Here, you can find my
                             projects, blog posts, and contact information.
                         </p>
                         <div className="mt-12 flex gap-x-12">
-                            <MainButton text="Projects" hash="projects" />
-                            <MainButton text="Contact Me" hash="contact" />
+                            <MainButton text="projects" hash="projects" />
+                            <MainButton text="contact me" hash="contact" />
                         </div>
                     </div>
-                    <div className="flex flex-1 items-center justify-center pt-24">
+                    <div className="flex flex-1 items-center justify-center px-4 pt-24">
                         <div className="relative">
                             <div className="aspect-square w-[25rem]">
                                 <div
-                                    id="box-1"
+                                    id={styles["box-1"]}
                                     className="aspect-square w-[20rem]"
                                 />
                                 <div
-                                    id="box-2"
+                                    id={styles["box-2"]}
                                     className="aspect-square w-[20rem]"
                                 />
                                 <div
-                                    id="box-3"
+                                    id={styles["box-3"]}
                                     className="aspect-square w-[20rem]"
                                 />
                             </div>
