@@ -11,11 +11,13 @@
     --color-palette-green: #00ff84;
     --color-palette-yellow: #ffd800;
     --color-palette-white: #e6e6e6;
+    --color-palette-red: #ff0033;
 
     /* support */
     --color-palette-dark-gray: #1a1a1a;
     --color-palette-dark-green: #00994c;
     --color-palette-light-yellow: #ffe766;
+    --color-palette-light-red: #ff4c4c;
 
     /* glow */
     --glow-green: 0px 0px 15px #00ff84, 0px 0px 30px #00ff84;
@@ -25,8 +27,20 @@
 
 html {
     scroll-behavior: smooth !important;
+    scroll-snap-type: y mandatory;
 }
 
 body {
     background: var(--color-palette-black);
+}
+
+@utility group-hover-white-svg-shadow {
+    filter: drop-shadow(0px 0px 7px var(--color-palette-white))
+        drop-shadow(0px 0px 15px var(--color-palette-white));
+}
+
+@utility group-hover-white-text-shadow {
+    text-shadow:
+        0px 0px 7px var(--color-palette-white),
+        0px 0px 15px var(--color-palette-white);
 }

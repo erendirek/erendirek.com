@@ -1,0 +1,48 @@
+@import url("@/ui/globals.css");
+
+.header-green-glow-animation {
+    animation: green-glow-animation 4s infinite;
+}
+
+@keyframes green-glow-animation {
+    0%,
+    100% {
+        text-shadow:
+            0px 0px 15px var(--color-palette-green),
+            0px 0px 30px var(--color-palette-yellow);
+    }
+
+    50% {
+        text-shadow:
+            0px 0px 22.5px var(--color-palette-green),
+            0px 0px 45px var(--color-palette-yellow);
+    }
+}
+
+.yellow-text-glow {
+    text-shadow:
+        0px 0px 7px var(--color-palette-yellow),
+        0px 0px 15px var(--color-palette-yellow);
+}
+
+.red-text-glow {
+    text-shadow:
+        0px 0px 7px var(--color-palette-red),
+        0px 0px 15px var(--color-palette-red);
+}
+
+.green-text-glow {
+    text-shadow:
+        0px 0px 7px var(--color-palette-green),
+        0px 0px 15px var(--color-palette-green);
+}
+
+.green-svg-glow {
+    filter: drop-shadow(0px 0px 7px var(--color-palette-green))
+        drop-shadow(0px 0px 15px var(--color-palette-green));
+}
+
+.yellow-svg-glow {
+    filter: drop-shadow(0px 0px 7px var(--color-palette-yellow))
+        drop-shadow(0px 0px 15px var(--color-palette-yellow));
+}
