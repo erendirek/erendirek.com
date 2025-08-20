@@ -2,7 +2,6 @@ import TypeWriterText from "@/components/TypeWriterText/TypeWriterText";
 import { share_tech_mono } from "@/ui/fonts";
 import clsx from "clsx";
 import React from "react";
-import styles from "./Blogs.module.css";
 
 export default function Blogs() {
     return (

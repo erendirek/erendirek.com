@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import Image from "next/image";
-import styles from "./SlideShow.module.css";
 
 export default function SlideShowElement({
     title,

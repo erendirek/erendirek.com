@@ -1,5 +1,3 @@
-@import url("@/ui/globals.css");
-
 .cursor {
     animation: blink-animation 0.75s infinite step-end;
 }

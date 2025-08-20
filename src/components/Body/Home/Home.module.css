@@ -1,5 +1,3 @@
-@import url("@/ui/globals.css");
-
 .main-text-glow-anim {
     animation: glow 4s infinite;
 }
