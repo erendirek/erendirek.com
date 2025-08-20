@@ -1,4 +1,4 @@
-# erendirek.com - Personal Portfolio Website
+# [erendirek.com](https://erendirek.com) - Personal Portfolio Website
 
 This is the repository for my personal portfolio website. It's a single-page application built with Next.js and TypeScript, designed to showcase my projects, skills, and contact information with a modern, futuristic aesthetic.
 
@@ -65,7 +65,3 @@ To run this project locally, follow these steps:
     pnpm dev
     ```
     Open http://localhost:3000 in your browser to see the result.
-
-## 🌐 Deployment
-
-This is a Next.js application and can be easily deployed on any platform that supports Node.js, with first-class support on Vercel.
