@@ -90,7 +90,12 @@ export default function Navbar() {
 
     return (
         <nav className="fixed top-0 z-[100] w-screen">
-            <div className="bg-palette-black/75 relative flex min-h-32 md:hidden">
+            <div
+                className={clsx(
+                    "relative flex min-h-32 md:hidden",
+                    navOpen && "bg-palette-black/75 h-screen",
+                )}
+            >
                 <div className="flex h-32 flex-1 items-center justify-center">
                     <button className="p-4" onClick={toggleNav}>
                         <Menu
@@ -110,7 +115,7 @@ export default function Navbar() {
                     </button>
                 </div>
                 <div
-                    className="bg-palette-black/75 absolute top-0 mt-32 w-full transition-all"
+                    className="absolute top-0 z-10 mt-32 w-full transition-all"
                     style={{
                         transform: navOpen ? "scale(1,1)" : "scale(1,0)",
                         transformOrigin: "top",

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-    --background: #ffffff;
+    --background: var(--color-palette-black);
     --foreground: #171717;
 }
 
@@ -30,9 +30,9 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-body {
+/* body {
     background: var(--color-palette-black);
-}
+} */
 
 @utility group-hover-white-svg-shadow {
     filter: drop-shadow(0px 0px 7px var(--color-palette-white))
@@ -43,4 +43,26 @@ body {
     text-shadow:
         0px 0px 7px var(--color-palette-white),
         0px 0px 15px var(--color-palette-white);
+}
+
+body {
+    background-color: var(--background);
+    background-image: repeating-linear-gradient(
+        45deg,
+        #00ff8410 1px,
+        #ffd90010 2px,
+        transparent 1px,
+        transparent 4px
+    );
+    background-size: 40px 20px;
+    animation: subtleMove 30s linear infinite;
+}
+
+@keyframes subtleMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -200px 200px; /* sol çapraza doğru kayma */
+    }
 }

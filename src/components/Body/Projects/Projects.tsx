@@ -1,11 +1,25 @@
+"use client";
+
 import { share_tech_mono } from "@/ui/fonts";
 import clsx from "clsx";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TypeWriterText from "@/components/TypeWriterText/TypeWriterText";
 import SlideShow from "@/components/SlideShow/SlideShow";
 import SlideShowElement from "@/components/SlideShow/SlideShowElement";
 
 export default function Projects() {
+    const [shownContentCount, setShownContentCount] = useState(2);
+
+    useEffect(() => {
+        const onResize = () => {
+            setShownContentCount(window.innerWidth <= 1024 ? 1 : 2);
+        };
+        onResize();
+
+        window.addEventListener("resize", onResize);
+        return () => window.removeEventListener("resize", onResize);
+    }, []);
+
     return (
         <div id="projects" className="section h-screen snap-start">
             <div className="container mx-auto h-full pt-32">
@@ -35,8 +49,11 @@ export default function Projects() {
                         )}
                     />
                 </div>
-                <div className="mt-32 flex h-96 items-stretch px-4">
-                    <SlideShow className="hidden flex-1">
+                <div className="mt-12 flex items-stretch px-4 md:mt-32">
+                    <SlideShow
+                        className="flex-1"
+                        shownContentCount={shownContentCount}
+                    >
                         <SlideShowElement
                             title="Yaten's Horror Session"
                             description="My first game published on Google Play."

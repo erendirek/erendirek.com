@@ -7,12 +7,14 @@ import React, { Children, HTMLAttributes, useEffect, useState } from "react";
 export default function SlideShow({
     children,
     className,
+    shownContentCount,
 }: Readonly<{
     children?: React.ReactNode;
     className?: string;
+    shownContentCount: number;
 }>) {
     const [current, setCurrent] = useState(0);
-    const [shownContentCount, setShownContentCount] = useState(2);
+    const [isSmall, setIsSmall] = useState<"sm" | "nsm">("nsm");
 
     const prev = () => {
         const childCount = Children.count(children);
@@ -29,30 +31,22 @@ export default function SlideShow({
     };
 
     useEffect(() => {
-        const onSizeChanged = () => {
-            const sizeX = window.innerWidth;
-            let scc = 0;
-            scc = sizeX < 1024 ? 1 : 2;
-
-            setShownContentCount(scc);
+        const onResize = () => {
+            setIsSmall(window.innerWidth <= 640 ? "sm" : "nsm");
         };
+        onResize();
 
-        window.addEventListener("resize", onSizeChanged);
-
-        return () => window.removeEventListener("resize", onSizeChanged);
+        window.addEventListener("resize", onResize);
+        return () => window.removeEventListener("resize", onResize);
     }, []);
-
-    useEffect(() => {
-        console.log(shownContentCount);
-    }, [shownContentCount]);
 
     return (
         <div className={clsx(className)}>
             <div className="flex h-full">
-                <div className="flex w-1/12 items-center justify-start">
+                <div className="flex items-center justify-start">
                     <button onClick={prev}>
                         <ChevronLeft
-                            size={64}
+                            size={isSmall == "sm" ? 32 : 64}
                             className={clsx(
                                 "text-palette-yellow",
                                 "yellow-svg-glow",
@@ -60,7 +54,7 @@ export default function SlideShow({
                         />
                     </button>
                 </div>
-                <div className="flex flex-1 overflow-hidden">
+                <div className="flex flex-1 shrink-0 overflow-hidden">
                     <div
                         id="track"
                         className="flex w-full transition-all"
@@ -80,10 +74,10 @@ export default function SlideShow({
                         ))}
                     </div>
                 </div>
-                <div className="flex w-1/12 items-center justify-end">
+                <div className="flex items-center justify-end">
                     <button onClick={next}>
                         <ChevronRight
-                            size={64}
+                            size={isSmall == "sm" ? 32 : 64}
                             className={clsx(
                                 "text-palette-yellow",
                                 "yellow-svg-glow",

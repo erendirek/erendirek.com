@@ -33,19 +33,19 @@ export default function Home() {
         <div
             id="home"
             className={clsx(
-                "section flex h-screen w-full snap-start items-center overflow-hidden",
+                "section flex h-screen w-full snap-start lg:items-center",
             )}
         >
             <div className="container mx-auto">
-                <div className="flex flex-col lg:flex-row">
-                    <div className="flex flex-1 flex-col items-stretch justify-center px-4 pt-32">
+                <div className="flex flex-col px-4 lg:flex-row">
+                    <div className="flex flex-1 flex-col items-stretch justify-center pt-32">
                         <TypeWriterText
                             text="eren direk"
                             animationDuration={400}
                             cursor
                             className={clsx(
                                 `${share_tech_mono.className} antialiased`,
-                                "text-center text-6xl lg:text-left",
+                                "pt-4 text-center text-5xl md:text-6xl lg:pt-0 lg:text-left",
                                 "text-palette-light-yellow lg:text-7xl xl:text-8xl",
                                 styles["main-text-glow-anim"],
                                 "typewriter",
@@ -53,18 +53,18 @@ export default function Home() {
                         />
 
                         <p className="text-palette-white mt-12 text-justify text-xl lg:text-left lg:text-2xl">
-                            I’m a self-taught developer who enjoys learning and
+                            I’m a software developer who enjoys learning and
                             improving in different fields. Here, you can find my
                             projects, blog posts, and contact information.
                         </p>
-                        <div className="mt-12 hidden gap-x-2 lg:flex">
+                        <div className="mt-12 !hidden gap-x-2 lg:flex">
                             <MainButton text="projects" hash="projects" />
                             <MainButton text="contact me" hash="contact" />
                         </div>
                     </div>
                     <div
                         className={clsx(
-                            "flex flex-1 items-center justify-center px-4 pt-16",
+                            "flex flex-1 items-center justify-center pt-16",
                         )}
                     >
                         <div className="relative">
