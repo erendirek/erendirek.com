@@ -36,8 +36,8 @@ export default function About() {
                 </div>
                 <div className="flex">
                     <div className="flex-1 px-4">
-                        <p className="text-palette-white mt-12 text-justify leading-8 sm:text-xl md:text-left md:text-2xl md:leading-10">
-                            I’m a self-taught developer and Computer Science
+                        <p className="text-palette-white mt-12 text-justify leading-6 sm:text-xl sm:leading-8 md:text-left md:text-2xl md:leading-10">
+                            I’m a software developer and Computer Science
                             student with a strong passion for technology. Since
                             2020, I’ve been exploring and improving myself in
                             various fields including game development, backend
