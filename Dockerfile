@@ -1,12 +1,12 @@
-FROM alpine:latest
+FROM node:current-alpine3.22
 
 WORKDIR /app
 
-RUN apk update && apk add npm && mkdir erendirekcom
+RUN mkdir erendirek.com
 
-COPY . /app/erendirekcom
+COPY . /app/erendirek.com
 
-WORKDIR /app/erendirekcom
+WORKDIR /app/erendirek.com
 
 EXPOSE 3000
 
