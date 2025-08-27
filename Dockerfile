@@ -2,7 +2,7 @@ FROM alpine:latest
 
 WORKDIR /app
 
-RUN "apk add npm & mkdir erendirekcom"
+RUN "apk update & apk add npm & mkdir erendirekcom"
 
 COPY . /app/erendirekcom
 
