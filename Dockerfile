@@ -2,11 +2,11 @@ FROM alpine:latest
 
 WORKDIR /app
 
-RUN "apk add npm & mkdir erendirek.com"
+RUN "apk add npm & mkdir erendirekcom"
 
-COPY . /app/
+COPY . /app/erendirekcom
 
-WORKDIR /app/erendirek.com
+WORKDIR /app/erendirekcom
 
 EXPOSE 3000
 
