@@ -1,10 +1,10 @@
 FROM alpine:latest
 
-RUN "apk add npm"
-
 WORKDIR /app
 
-COPY ../erendirek.com /app/
+RUN "apk add npm & mkdir erendirek.com"
+
+COPY . /app/
 
 WORKDIR /app/erendirek.com
 
