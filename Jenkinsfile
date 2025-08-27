@@ -13,9 +13,5 @@ pipeline {
                 }
             }
         }
-
-        stage ("Production Deploy") {
-
-        }
     }
 }
