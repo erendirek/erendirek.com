@@ -13,4 +13,4 @@ WORKDIR /app
 COPY --from=build /app/erendirek.com/.next/standalone/ /app/
 COPY --from=build /app/erendirek.com/.next/static /app/.next/
 COPY --from=build /app/erendirek.com/public /app/
-CMD ["npm", "run", "start"]
+CMD ["node", "server.js"]
