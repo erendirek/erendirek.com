@@ -4,7 +4,7 @@ import "@/ui/general.css";
 import { fira_code } from "@/ui/fonts";
 
 export const metadata: Metadata = {
-    title: "erendirek.com",
+    title: "Eren Direk",
     description: "by eren direk",
 };
 
