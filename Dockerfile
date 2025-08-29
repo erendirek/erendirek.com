@@ -12,5 +12,4 @@ FROM node:current-alpine3.22
 WORKDIR /app
 COPY --from=build /app/erendirek.com/.next/standalone/ /app/
 COPY --from=build /app/erendirek.com/.next/static /app/.next/
-COPY --from=build /app/erendirek.com/public /app/
 CMD ["node", "server.js"]
